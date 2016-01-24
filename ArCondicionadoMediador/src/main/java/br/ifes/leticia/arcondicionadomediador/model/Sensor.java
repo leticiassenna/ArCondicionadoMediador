@@ -34,14 +34,14 @@ public class Sensor {
     
     public void ligar(){
         this.ligado = true;
-        mediador.ligarArCondicionado();
-        System.out.println("Ar Condicionado ligado!! ");
+        System.out.println("Sensor " + getCodSensor() + " ligado!!");
+        mediador.habilitarSensor();
     }
     
     public void desligar(){
         this.ligado = false;
-        mediador.desligarArCondicionado();
-        System.out.println("Ar Condicionado ligado!! ");
+        System.out.println("Sensor " + getCodSensor() + " desligado!!");
+        mediador.desabilitarSensor();
     }
     
     public boolean estaLigado(){

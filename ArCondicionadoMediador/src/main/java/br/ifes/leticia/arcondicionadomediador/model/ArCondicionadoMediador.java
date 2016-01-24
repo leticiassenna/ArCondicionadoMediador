@@ -23,7 +23,7 @@ public class ArCondicionadoMediador {
     }
     
     public void registrarSensor(Sensor sensor){
-        this.sensor = sensor;
+        listaSensores.put(sensor.getCodSensor(), sensor);
     }
     
     public void ligarArCondicionado(){
@@ -42,11 +42,8 @@ public class ArCondicionadoMediador {
         System.out.println("Ar Condicionado desconectado com o Sensor!! ");
     }
     
-    public void controlandoTemperatura(Sensor sensorCap){
-        Sensor sensores = sensorCap;
-                
-        listaSensores.put(sensores.getCodSensor(), sensores);
-        
+    public void controlandoTemperatura(){
+              
         if(listaSensores.size() == 3){
             
             this.temperaturaAtual = this.temperaturaAtual + media_sensores(listaSensores.get(1), listaSensores.get(2), 
@@ -54,15 +51,15 @@ public class ArCondicionadoMediador {
             System.out.println(temperaturaAtual + " graus. Ideal: 25 graus");
             
             if(temperaturaAtual > 25){
-                System.out.println("Temperatura normalizando");
-                this.temperaturaAtual = - sensores.getCurrentNumPessoas();
+                System.out.println("Temperatura normalizando\n");
+                this.temperaturaAtual = - this.mediaPessoas;
             }
             else {
-                System.out.println("Nenhuma mudanca");
+                System.out.println("Nenhuma mudanca\n");
             }
         }
         else{
-            System.out.println("Esperando outros sensores");
+            System.out.println("Esperando outros sensores\n");
         }
     }
     

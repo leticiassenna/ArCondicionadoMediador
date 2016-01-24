@@ -17,9 +17,17 @@ public class App {
     public static void main(String[] args){
         
         ArCondicionadoMediador arCondicionado = new ArCondicionadoMediador();
+        //arCondicionado.ligarArCondicionado();
         Sensor sensor1 = new Sensor(arCondicionado, 2, 1);
+        sensor1.ligar();
         Sensor sensor2 = new Sensor(arCondicionado, 5, 2);
+        sensor2.ligar();
         Sensor sensor3 = new Sensor(arCondicionado, 7, 3);
+        sensor3.ligar();
+        arCondicionado.controlandoTemperatura();
         
+        sensor1.desligar();
+        sensor2.desligar();
+        sensor3.desligar();
     }
 }

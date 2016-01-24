@@ -5,15 +5,11 @@
  */
 package br.ifes.leticia.arcondicionadomediador.control;
 
-import br.ifes.leticia.arcondicionadomediador.model.ArCondicionadoMediador;
 
 /**
  *
  * @author Leticia
  */
 public class ArCondicionadoCtrl {
-    public void ligarAr(int numPessoas, int codigoSensor){
-        ArCondicionadoMediador arCondicionado = new ArCondicionadoMediador();
-        
-    }
+    
 }
