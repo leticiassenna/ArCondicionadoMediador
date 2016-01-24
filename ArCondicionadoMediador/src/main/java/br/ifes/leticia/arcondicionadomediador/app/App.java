@@ -17,7 +17,6 @@ public class App {
     public static void main(String[] args){
         
         ArCondicionadoMediador arCondicionado = new ArCondicionadoMediador();
-        //arCondicionado.ligarArCondicionado();
         Sensor sensor1 = new Sensor(arCondicionado, 2, 1);
         sensor1.ligar();
         Sensor sensor2 = new Sensor(arCondicionado, 5, 2);
